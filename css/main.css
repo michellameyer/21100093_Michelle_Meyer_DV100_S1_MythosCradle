@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: "Mythos";
+    src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+    padding: 10px 40px;
+    margin: 25px 70px;
+    border-radius: 30px;
+    width: 1220px; /*HELP!!!*/
+
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.logo a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    height: 60px;
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navLinks a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+    opacity: 0.6;
+}
+
+.navLinks a:active {
+  color: red;
+}
+
+
+.hero{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    height: 100vh;
+    background-image: url("../assets/img/homeHeader.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    /* HELP: image is bigger than example? */
+}
+
+.heroText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 90px;
+    margin-bottom: 80px;
+
+    /* HELP: decrease gap between title + tagline */
+}
+
+.heroTitle{
+    font-family: "Mythos", sans-serif;
+    font-size: 96px;
+    font-weight: 400;
+    color: #e9ad1c;
+    /*margin-right: 80px;*/
+    margin: 0px;
+}
+
+.heroTagline{
+    font-family: "Metamorphous", serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0px;
+    padding: 15px; /* HELP: tagline + title don't align??? */
+}
+
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #002d68;
+    margin: 0px;
+    padding: 30px
+}
+
+.introText button{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+
+    background-color: #15d5f5;
+    border-style: none;
+    border-radius: 10px;
+
+    padding: 19px 50px; /* HELP: 20  50 LOOKS wrong, but these values FEEL wrong. */
+}
+
+.introText h1{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #e9ad1c;
+}
+
+.introText h2{
+    color: white;
+}
+
+.introText p{
+    font-weight: 300;
+    color: white;
+    padding: 20px 0px
+}
+
+
+/* HELP:
+
+- pt or px for fonts?? hero text looks too big
+- .journey {}, .tinyLegends {}, etc. OR .introText p{}, .introText h1{}?
+- prioritise replicating screenshots or follow style sheet?
+
+*/
