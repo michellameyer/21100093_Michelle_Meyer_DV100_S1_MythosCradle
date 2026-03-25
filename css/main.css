@@ -3,11 +3,26 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+h1{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
 @font-face {
     font-family: "Mythos";
     src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
 }
-
 
 .navbar{
     display: flex;
@@ -51,10 +66,9 @@ body{
     opacity: 0.6;
 }
 
-.navLinks a:active {
+.navLinks a:active{
   color: red;
 }
-
 
 .hero{
     display: flex;
@@ -62,8 +76,6 @@ body{
     align-items: flex-end;
 
     height: 90vh;
-
-    /* HELP: image is bigger than example? */
 }
 
 .homeBack{
@@ -90,7 +102,8 @@ body{
     font-size: 96px;
     font-weight: 400;
     color: #e9ad1c;
-    /*margin-right: 80px;*/
+    text-transform: none;
+
     margin: 0px;
 }
 
@@ -101,9 +114,8 @@ body{
     font-style: normal;
     color: white;
     margin: 0px;
-    padding: 15px; /* HELP: tagline + title don't align if padding isn't added??? */
+    padding: 15px;
 }
-
 
 .intro{
     display: flex;
@@ -112,18 +124,14 @@ body{
     align-items: center;
 
     background-color: #002d68;
-    padding: 30px
+    padding: 25px
 }
 
-.introContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.introSlider{
+    width: 175%;
+    padding: 60px 20px;
 
-    background-color: #002d68;
-    margin: 0px;
-    padding: 40px
+    /*HELP: WIDTH NONSENSE?????*/
 }
 
 .introText{
@@ -139,7 +147,7 @@ body{
     border-style: none;
     border-radius: 10px;
 
-    padding: 19px 50px; /* HELP: 20  50 LOOKS wrong, but these values FEEL wrong. */
+    padding: 19px 50px;
 }
 
 .introText h1{
@@ -157,13 +165,180 @@ body{
 
 .introText p{
     font-weight: 300;
+    line-height: 1.75;
+
     color: white;
-    padding: 20px 0px
+    padding: 20px 0px;
+    padding-right: 90px;
 }
 
+.cradle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    margin-right: 45px;
+}
 
-/* REMEMBER:
+.cradleText{
+    padding-left: 90px;
+    padding-right: 20px;
+}
 
-- make styling ONCE for h1, h2, etc.
+.cradleText h1{
+    color: #15d5f5;
+}
 
-*/
+.cradleText p{
+    font-size: 18px;
+    color: #888888;
+    padding-right: 150px
+}
+
+.cradle img{
+    border-radius: 20px;
+}
+
+.success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #002d68;
+    padding: 55px 0px 75px;
+}
+
+.successText{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.successText h1{
+    color: #e9ad1c;
+    padding-bottom: 5px;
+}
+
+.successText h2{
+    line-height: 1.4;
+    color: white;
+    padding: 0px 400px;
+}
+
+.cardsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card{
+    margin: 0px 15px 55px;
+    background-color: transparent;
+    border: none;
+}
+
+.cardImg{
+    border-radius: 20px;
+}
+
+.cardBody{
+    color: white;
+    padding: 10px 25px;
+}
+
+.cardBody h1{
+    text-align: center;
+    text-transform: none;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.cardBody p{
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.success button{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+
+    background-color: #15d5f5;
+    border-style: none;
+    border-radius: 10px;
+
+    padding: 19px 30px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 60px 140px;
+}
+
+/*.footerLeft{
+
+}*/
+
+.leftSubhead p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    text-transform: none;
+    padding-top: 15px;
+    color: #888888;
+}
+
+.footerMiddle h1, .footerRight h1{
+    text-transform: none;
+
+}
+
+.footerRight{
+    display: flex;
+    flex-direction: column;
+}
+
+.socialsIcons a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+hr{
+    width: 80%;
+    margin: 20px auto;
+    color: #888888;
+}
+
+.footerLegal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 30px 100px 20px;
+}
+
+.footerLegal p{
+    font-size: 14px;
+    color: #888888;
+}
+
+.legalRight{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.legalRight p{
+    font-weight: 500;
+}
