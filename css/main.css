@@ -24,6 +24,14 @@ p{
     src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
 }
 
+.headerContainer{
+    background-image: url("../assets/img/homeHeader.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    height: 100vh;
+}
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -37,7 +45,7 @@ p{
 }
 
 .navbarContainer{
-    padding-top: 15px;
+    padding-top: 25px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -66,76 +74,93 @@ p{
     opacity: 0.6;
 }
 
-.navLinks a:active{
-  color: red;
+.navLinks a.active{
+  color: #05bfe0;
+  font-weight: 600;
 }
 
-.hero{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    height: 90vh;
+.searchItem{
+    background-color: white;
+    border: none;
 }
 
-.homeBack{
-    background-image: url("../assets/img/homeHeader.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: none;
-
-    height: 100vh;
+.bar{
+    border-right: solid #f3f3f3 2px;
 }
 
-.heroText{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 90px;
-    margin-bottom: 80px;
-
-    /* HELP: decrease gap between title + tagline */
-}
-
-.heroText h1{
-    font-family: "Mythos", sans-serif;
-    font-size: 96px;
-    font-weight: 400;
-    color: #e9ad1c;
-    text-transform: none;
-
-    margin: 0px;
-}
-
-.heroText p{
-    font-family: "Metamorphous", serif;
-    font-size: 24px;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    margin: 0px;
-    padding: 15px;
-}
-
-.intro{
+.search{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
+    background-color: white;
+    height: 55%;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  color: #4e4e4e;
+}
+
+#magnifyingGlass{
+    color: #9a9a9a;
+}
+
+#basket{
+    color: black;
+    padding-left: 15px;
+    scale: 1.3;
+}
+
+.heroText{
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+}
+
+.heroTitle{
+    font-family: "Mythos", sans-serif;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #e9ad1c;
+}
+
+.heroTagline{
+    font-family: "Metamorphous", serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    padding-left: 15px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
     background-color: #002d68;
-    padding: 25px
+    padding: 70px;
+    padding-left: 90px;
 }
 
 .introSlider{
-    width: 175%;
-    padding: 60px 20px;
-
-    /*HELP: WIDTH NONSENSE?????*/
+    width: 50%;
+    padding: 0px 30px;
 }
 
 .introText{
-    padding: 40px;
+    width: 50%;
+    padding: 50px 0px;
+    padding-left: 50px;
+    padding-right: 110px;
 }
 
 .introText button{
@@ -169,7 +194,7 @@ p{
 
     color: white;
     padding: 20px 0px;
-    padding-right: 90px;
+    padding-right: 0px;
 }
 
 .cradle{
@@ -283,10 +308,6 @@ p{
     margin: 60px 140px;
 }
 
-/*.footerLeft{
-
-}*/
-
 .leftSubhead p{
     font-size: 16px;
     font-weight: 400;
@@ -297,21 +318,42 @@ p{
     color: #888888;
 }
 
-.footerMiddle h1, .footerRight h1{
-    text-transform: none;
+.footerMiddle h3, .footerRight h3{
+    font-size: 18px;
+    font-weight: 600;
 
+    padding-bottom: 20px;
+}
+
+.footerMiddle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerMiddle a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.5;
+    padding: 10px 0px;
 }
 
 .footerRight{
     display: flex;
     flex-direction: column;
+    width: 30%;
 }
 
-.socialsIcons a{
+.socialsIcons{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
+    gap: 10px
+}
+
+.socialsIcons img{
+    width: 100%;
 }
 
 hr{
@@ -325,7 +367,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
 
-    margin: 30px 100px 20px;
+    margin: 30px 130px 20px;
 }
 
 .footerLegal p{
