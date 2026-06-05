@@ -1,3 +1,4 @@
+/*GENERAL*/
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -14,9 +15,26 @@ h2{
     font-weight: 700;
 }
 
+/*h3{
+
+}*/
+
 p{
     font-size: 18px;
     font-weight: 300;
+}
+
+.turqButton{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+
+    background-color: #05bfe0;
+    border: none;
+    border-radius: 10px;
+
+    padding: 19px 50px;
 }
 
 img{
@@ -28,6 +46,8 @@ img{
     src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
 }
 
+
+/*HEADER*/
 .headerContainer{
     background-image: url("../assets/img/homeHeader.png");
     background-size: cover;
@@ -36,7 +56,8 @@ img{
     height: 100vh;
 }
 
-.navbar{
+/*NAV*/
+.nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,7 +69,7 @@ img{
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.navbarContainer{
+.navContainer{
     padding-top: 25px;
     display: block;
     margin-left: auto;
@@ -89,11 +110,15 @@ img{
 }
 
 .bar{
+    border: none;
     border-right: solid #e2e2e2 2px;
-    margin-right: 5px;
+    width: 250px;
+    outline: none;
 }
 
-.search{
+.wholeSearch{
+position: relative;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,10 +131,64 @@ img{
     margin-right: 0px;
 }
 
+.justSearch{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.searchInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .search input::placeholder{
   font-weight: 500;
   font-size: 14px;
   color: #4e4e4e;
+}
+
+.searchResult{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+
+    z-index: 1000;
+}
+
+.searchResult ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.searchResult ul li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.searchResult li:hover{
+    background-color: #f3f3f3;
+}
+
+.searchResult li a{
+    display: block;
+    width: 100%;
+
+    /*padding: 12px 16px;*/
+
+    text-decoration: none;
+    color: black;
 }
 
 #magnifyingGlass{
@@ -122,21 +201,24 @@ img{
     scale: 1.3;
 }
 
+
+/*HERO*/
 .heroText{
     position: absolute;
     bottom: 80px;
     right: 100px;
 }
 
-.heroTitle{
+.heroText h1{
     font-family: "Mythos", sans-serif;
     font-size: 96px;
     font-weight: 400;
+    text-transform: capitalize;
     line-height: 1.2;
     color: #e9ad1c;
 }
 
-.heroTagline{
+.heroText h2{
     font-family: "Metamorphous", serif;
     font-size: 24px;
     font-weight: 400;
@@ -145,87 +227,87 @@ img{
     padding-left: 15px;
 }
 
-.intro{
+
+/*2 COLUMNS*/
+.flexContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
 
+    gap: 5%;
+    padding: 3% 8%;
+}
+
+.flexContainerTop{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+
+    gap: 5%;
+    padding: 3% 8%;
+}
+
+.twoCol{
+    width: 50%;
+    margin: 0px 20px;
+}
+
+
+/*BLUE BACKGROUND*/
+.blueBG{
     background-color: #002d68;
-    padding: 70px;
-    padding-left: 90px;
-}
-
-.introSlider{
-    width: 50%;
-    padding: 0px 30px;
-}
-
-.introText{
-    width: 50%;
-    padding: 50px 0px;
-    padding-left: 50px;
-    padding-right: 110px;
-}
-
-.introText button{
-    font-size: 18px;
-    font-weight: 700;
     color: white;
-
-    background-color: #15d5f5;
-    border-style: none;
-    border-radius: 10px;
-
-    padding: 19px 50px;
 }
 
-.introText h1{
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
+.blueBG h1{
     color: #e9ad1c;
 }
 
-.introText h2{
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
+/*
+.blueBG h3{
+
+}
+*/
+
+.blueBG p{
+    line-height: 1.75;
+    padding: 20px 0px;
 }
 
-.introText p{
+
+/*WHITE BACKGROUND*/
+.whiteBG h1{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #05bfe0;
+}
+
+.whiteBG h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    padding-top: 5px;
+}
+
+/*
+.whiteBG h3{
+
+}
+*/
+
+.whiteBG p{
     font-weight: 300;
     line-height: 1.75;
 
-    color: white;
-    padding: 20px 0px;
-    padding-right: 0px;
+    color: black;
+    padding: 15px 0px;
 }
 
-.cradle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 70px;
-    margin-right: 45px;
-}
 
-.cradleText{
-    padding-left: 90px;
-    padding-right: 20px;
-}
-
-.cradleText h1{
-    color: #15d5f5;
-}
-
-.cradleText p{
-    font-size: 18px;
-    color: #888888;
-    padding-right: 150px
-}
-
+/*SUCCESS*/
 .success{
     display: flex;
     flex-direction: column;
@@ -252,7 +334,7 @@ img{
     padding: 0px 400px;
 }
 
-.cardsContainer{
+.cardContainer{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -289,18 +371,8 @@ img{
     line-height: 1.7;
 }
 
-.success button{
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
 
-    background-color: #15d5f5;
-    border-style: none;
-    border-radius: 10px;
-
-    padding: 19px 30px;
-}
-
+/*FOOTER*/
 .footer{
     display: flex;
     flex-direction: row;
@@ -309,7 +381,7 @@ img{
     margin: 60px 140px;
 }
 
-.leftSubhead p{
+.footerSubhead{
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -345,7 +417,7 @@ img{
     width: 30%;
 }
 
-.socialsIcons{
+.socialIcons{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -353,7 +425,7 @@ img{
     gap: 10px
 }
 
-.socialsIcons img{
+.socialIcons img{
     width: 100%;
 }
 
@@ -386,6 +458,8 @@ hr{
     font-weight: 500;
 }
 
+
+/*ADOPT*/
 .adoptHeaderContainer{
     background-image: url("../assets/img/adoptHeader.png");
     background-size: cover;
@@ -395,10 +469,10 @@ hr{
     aspect-ratio: 1433 / 350;
 }
 
-.adoptTitle h1{
+.pageTitle h1{
     font-family: "Mythos";
     font-size: 90px;
-    text-transform: none;
+    text-transform: capitalize;
     text-align: center;
     color: white;
     padding-top: 70px;
@@ -420,6 +494,82 @@ hr{
     color: #e9ad1c;
 }
 
+.adoptWhite h1{
+    font-size: 40px;
+    font-weight: 550;
+    text-transform: capitalize;
+}
+
+/*.adoptBlue{
+
+}*/
+
+.adoptRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    gap: 45px;
+}
+
+.adoptButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /*align-items: center;*/
+
+    gap: 30px;
+}
+
+.qtyCounter{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #002d68;
+    border-radius: 10px;
+}
+
+.qtyCounter input{
+    background-color: #002d68;
+    border-style: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;}
+
+.qtyCounter button{
+    background-color: #002d68;
+    border-style: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.twoCol hr{
+    margin: 50px 0px;
+    width: 100%;
+}
+
+.adoptItems{
+    display: flex;
+    flex-direction: row;
+}
+
+#star{
+    color: #e9ad1c;
+}
+
+
+/*CONTACT*/
 .contactHeaderContainer{
     background-image: url("../assets/img/contactHeader.png");
     background-size: cover;

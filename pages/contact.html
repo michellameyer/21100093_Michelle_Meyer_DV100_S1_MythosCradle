@@ -16,42 +16,60 @@
 
     <!--Bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/1316822bd3.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="../css/main.css">
 
 </head>
-<body>
-<div class="contactHeaderContainer">
-    <header>
-        <div class="navbarContainer">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../index.html">
-                <img src="../assets/img/logo.png" alt="The Mythos Cradle logo">
-                </a>
-            </div>
-            <div class="navLinks">
-                <a href="../index.html">Home</a>
-                <a href="/pages/adopt.html">Adopt</a>
-                <a  class="active" href="#">Contact</a>
-            </div>
 
-            <div class="search">
-                <button id="magnifyingGlass" class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <input class="searchItem bar" type="search" placeholder="Search">
-                <button id="basket" class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
-            </div>
-        </nav>
+<body>
+<section class="contactHeaderContainer">
+    <header>
+        <div class="navContainer">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="/assets/img/logo.png" alt="The Mythos Cradle logo">
+                    </a>
+                </div>
+
+                <div class="navLinks">
+                    <a href="../index.html">Home</a>
+                    <a href="/pages/adopt.html">Adopt</a>
+                    <a class="active" href="#">Contact</a>
+                </div>
+
+                <div class="wholeSearch">
+                    <div class="justSearch">
+                        <div class="searchInput">
+                            <button
+                            id="magnifyingGlass"
+                            class="searchItem">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <input class="searchItem bar" id="searchInput"
+                            type="search"
+                            placeholder="Search"
+                            autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="searchResult">
+                    </div>
+
+                    <button id="basket" class="searchItem" data-bs-toggle="modal"
+                    data-bs-target="#cartModal">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <div class="adoptTitle">
+    <div class="pageTitle">
         <h1>Contact Us</h1>
     </div>
-</div>
+</section>
 
 <section class="contactAboutContainer">
     <div class="contactAbout">
@@ -87,7 +105,7 @@
                 </div>
             </div>
 
-            <div class="mapContainer">
+            <div class="mapContainer" id="location">
                 <h1>Or visit us at our</h1>
                 <h2>Physical Location</h2>
 
@@ -99,15 +117,21 @@
         <div class="contactRight">
             <div class="contactForm">
                 <h2>Send us a message</h2>
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="formElement">
                         <label for="name">Your name</label>
                         <input type="text" id="name" name="name" placeholder="Abc" required/>
+                        <div class="invalid-feedback">
+                            Please enter your first name (min. 3 characters).
+                        </div>
                     </div>
 
                     <div class="formElement">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="name" placeholder="abc@def.com" required/>
+                        <input type="email" id="email" name="email" placeholder="abc@def.com" required/>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
                     </div>
 
                     <div class="formElement">
@@ -118,9 +142,13 @@
                     <div class="formElement">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="3" placeholder="Hi! I'd like to ask about..." required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter a message containing at least 20 characters.
+                        </div>
                     </div>
 
                     <button type="submit">Submit</button>
+                    <p id="successMessage"></p>
                 </form>
             </div>
         </div>
@@ -149,7 +177,7 @@
 
             <div class="footerRight">
                 <h3>Social Media Links</h3>
-                <div class="socialsIcons">
+                <div class="socialIcons">
                     <div><a href="https://www.facebook.com/theopenwindow/" target="_blank">
                         <img src="/assets/img/sm1.png" alt="facebook logo"></a></div>
                     
@@ -177,6 +205,15 @@
             </div>
         </div>
     </footer>
+
+
+<!--Bootstrap 5-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!--Font Awesome-->
+<script src="https://kit.fontawesome.com/1316822bd3.js" crossorigin="anonymous"></script>
+
+<script src="../js/script.js"></script>
 
 </body>
 </html>
